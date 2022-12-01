@@ -1,0 +1,21 @@
+
+class Solution
+{
+    static int majorityElement(int a[], int size)
+    {
+        int countFrequency[]=new int[1000000];
+         
+        for(int i=0;i<size;i++){
+            countFrequency[a[i]]++;
+            
+        } 
+        
+        for(int i=0;i<countFrequency.length;i++){
+            
+            if(countFrequency[i]>size/2){ return i;}
+            
+        }
+        return -1;
+         
+             }
+}
